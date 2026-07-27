@@ -42,12 +42,12 @@ export const categories: Category[] = [
     device: 'phone',
     profileSide: 'left',
     videos: [
-      { src: v('/videos/ai/Foxelli Edit.mp4'), label: 'Foxelli' },
-      { src: v('/videos/ai/Wireless GameStation Video1.mp4'), label: 'Wireless GameStation' },
-      { src: v('/videos/ai/Suspenders FINAL V2 Upscaled.mp4'), label: 'Suspenders' },
-      { src: v('/videos/ai/Bored v3.mp4'), label: 'Bored' },
-      { src: v('/videos/ai/Chevron X2 - V4.mp4'), label: 'Chevron' },
-      { src: v('/videos/ai/Human Powered V3.mp4'), label: 'Human Powered' },
+      { src: v('/videos/ai/Foxelli Edit.mp4'), label: 'Foxelli', orientation: 'portrait' },
+      { src: v('/videos/ai/Wireless GameStation Video1.mp4'), label: 'Wireless GameStation', orientation: 'portrait' },
+      { src: v('/videos/ai/Suspenders FINAL V2 Upscaled.mp4'), label: 'Suspenders', orientation: 'portrait' },
+      { src: v('/videos/ai/Bored v3.mp4'), label: 'Bored', orientation: 'portrait' },
+      { src: v('/videos/ai/Chevron X2 - V4.mp4'), label: 'Chevron', orientation: 'portrait' },
+      { src: v('/videos/ai/Human Powered V3.mp4'), label: 'Human Powered', orientation: 'portrait' },
     ],
   },
   {
@@ -124,7 +124,7 @@ export const categories: Category[] = [
     device: 'phone',
     profileSide: 'right',
     videos: [
-      { src: v('/videos/social/15 - Google Activation v2.mp4'), label: 'Google Activation' },
+      { src: v('/videos/social/15 - Google Activation v2.mp4'), label: 'Google Activation', orientation: 'portrait' },
       { src: v('/videos/social/Newt in Somerset - Pasta.mp4'), label: 'Pasta' },
       { src: v('/videos/social/Spitalfields SubMaster.mp4'), label: 'Spitalfields' },
       { src: v('/videos/social/Newt in Somerset - Buffalos.mp4'), label: 'Buffalos' },

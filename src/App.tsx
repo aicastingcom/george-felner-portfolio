@@ -7,7 +7,6 @@ import { AboutPage } from './components/AboutPage'
 import { CategorySection } from './components/CategorySection'
 import { ThankYou } from './components/ThankYou'
 import { ContactPage } from './components/ContactPage'
-import { ChapterNav } from './components/ChapterNav'
 import { SceneProvider } from './scene/SceneContext'
 import './App.css'
 
@@ -52,17 +51,6 @@ export default function App() {
     }
   }, [pageOpen])
 
-  const jumpTo = (id: string) => {
-    const el = document.getElementById(id)
-    const lenis = (window as unknown as { __lenis?: Lenis }).__lenis
-    const y = el ? el.offsetTop + 12 : 0
-    if (el && lenis) {
-      lenis.scrollTo(y, { duration: 1.0, immediate: false })
-    } else if (el) {
-      window.scrollTo({ top: y, behavior: 'smooth' })
-    }
-  }
-
   return (
     <SceneProvider>
       <div className="app">
@@ -80,8 +68,6 @@ export default function App() {
           </nav>
         </header>
 
-        <ChapterNav onJump={jumpTo} />
-
         <Hero />
 
         {categories.map((cat) => (
@@ -91,7 +77,7 @@ export default function App() {
         <ThankYou />
 
         <footer className="site-footer">
-          <p>George Felner · 12 international awards · {categories.length} chapters</p>
+          <p>George Felner · 12 international awards</p>
           <button type="button" className="footer-link" onClick={() => setContactOpen(true)}>
             georgefelner@gmail.com
           </button>

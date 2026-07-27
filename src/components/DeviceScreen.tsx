@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react'
-import type { Category, VideoOrientation } from '../data/categories'
+import type { Category, CategoryVideo, VideoOrientation } from '../data/categories'
 
 type Props = {
   category: Category
@@ -9,6 +9,15 @@ type Props = {
   active: boolean
   index: number
   onIndex: (i: number) => void
+}
+
+/** Start fetching the clip while the figure is still turning; show device once zoom begins */
+const LOAD_TURN = 0.35
+const SHOW_TURN = 0.68
+const SHOW_ZOOM = 0.02
+
+function defaultOrientation(video: CategoryVideo): VideoOrientation {
+  return video.orientation ?? 'landscape'
 }
 
 /**
@@ -22,9 +31,12 @@ export function DeviceScreen({ category, turn, zoom, active, index, onIndex }: P
   const videoRef = useRef<HTMLVideoElement>(null)
   const prevOrientation = useRef<VideoOrientation | null>(null)
   const [ready, setReady] = useState(false)
-  const [orientation, setOrientation] = useState<VideoOrientation>('landscape')
+  const [orientation, setOrientation] = useState<VideoOrientation>(() => defaultOrientation(category.videos[index] ?? category.videos[0]!))
   const [orientAnim, setOrientAnim] = useState<'portrait' | 'landscape-spin' | null>(null)
   const video = category.videos[index]
+
+  const shouldLoad = active && turn >= LOAD_TURN
+  const shouldShow = active && turn >= SHOW_TURN && zoom >= SHOW_ZOOM
 
   // Screen sits opposite the figure after profile turn
   const enterFrom = category.profileSide === 'right' ? 'left' : 'right'
@@ -74,13 +86,21 @@ export function DeviceScreen({ category, turn, zoom, active, index, onIndex }: P
     setOrientation(next)
   }, [])
 
-  // Explicit per-video orientation (e.g. Animation chapter) applies immediately
+  // Apply declared orientation immediately when category or clip changes
   useEffect(() => {
-    if (!video.orientation) return
-    commitOrientation(video.orientation)
-  }, [video.src, video.orientation, commitOrientation])
+    prevOrientation.current = null
+    const declared = defaultOrientation(video)
+    setOrientation(declared)
+    setOrientAnim(declared === 'portrait' ? 'portrait' : null)
+    if (video.orientation) {
+      prevOrientation.current = video.orientation
+    }
+  }, [category.id, index, video.src, video.orientation])
 
+  // Fall back to file metadata when no explicit orientation is set
   useEffect(() => {
+    if (video.orientation) return
+
     const el = videoRef.current
     if (!el) return
 
@@ -92,13 +112,14 @@ export function DeviceScreen({ category, turn, zoom, active, index, onIndex }: P
     if (el.readyState >= 1) onMeta()
 
     return () => el.removeEventListener('loadedmetadata', onMeta)
-  }, [resolveOrientation, commitOrientation, video.src, index])
+  }, [resolveOrientation, commitOrientation, video.src, video.orientation, index])
 
   useEffect(() => {
     const el = videoRef.current
-    if (!el || !active) return
+    if (!el || !shouldLoad) return
+
     const play = () => {
-      void el.play().catch(() => {})
+      if (shouldShow) void el.play().catch(() => {})
     }
     play()
     el.addEventListener('loadeddata', play)
@@ -107,13 +128,23 @@ export function DeviceScreen({ category, turn, zoom, active, index, onIndex }: P
       el.removeEventListener('loadeddata', play)
       el.removeEventListener('canplay', play)
     }
-  }, [active, ready, video.src, index])
+  }, [shouldLoad, shouldShow, ready, video.src, index])
 
-  // Wait until subject has mostly turned, then full device choreography
-  if (!active || turn < 0.68 || zoom < 0.02) return null
+  // Release bandwidth when leaving this chapter
+  useEffect(() => {
+    return () => {
+      const el = videoRef.current
+      if (!el) return
+      el.pause()
+      el.removeAttribute('src')
+      el.load()
+    }
+  }, [])
+
+  if (!shouldLoad) return null
 
   // 0 → 1 across zoom phase
-  const t = Math.min(1, Math.max(0, (zoom - 0.02) / 0.78))
+  const t = shouldShow ? Math.min(1, Math.max(0, (zoom - SHOW_ZOOM) / 0.78)) : 0
 
   // Full rotation: enter from side (edge-on) → swing to face viewer → zoom
   const yawAmt = enterFrom === 'left' ? 72 : -72
@@ -124,7 +155,12 @@ export function DeviceScreen({ category, turn, zoom, active, index, onIndex }: P
   let yaw: number
   let x: number
 
-  if (t < 0.38) {
+  if (!shouldShow) {
+    opacity = 0
+    scale = 0.55
+    yaw = yawAmt
+    x = xAmt
+  } else if (t < 0.38) {
     const u = t / 0.38
     opacity = Math.min(1, u * 1.35)
     scale = 0.55 + u * 0.2
@@ -150,6 +186,8 @@ export function DeviceScreen({ category, turn, zoom, active, index, onIndex }: P
     top: '50%',
     zIndex: 28,
     opacity,
+    visibility: shouldShow ? 'visible' : 'hidden',
+    pointerEvents: shouldShow ? 'auto' : 'none',
     transform: `translate(-50%, -50%) translateX(${x}vw) perspective(1400px) rotateY(${yaw}deg) scale(${scale})`,
     transformStyle: 'preserve-3d',
   }
@@ -166,6 +204,7 @@ export function DeviceScreen({ category, turn, zoom, active, index, onIndex }: P
     <div
       className={`device-screen device-${category.device} device-centered ${orientClass}`}
       style={style}
+      aria-hidden={!shouldShow}
       onPointerDown={(e) => {
         startX.current = e.clientX
       }}
@@ -190,22 +229,22 @@ export function DeviceScreen({ category, turn, zoom, active, index, onIndex }: P
         <div className={`device-bezel${ready ? ' is-ready' : ' is-loading'}`}>
           <video
             ref={videoRef}
-            key={video.src}
+            key={`${category.id}-${video.src}`}
             className="device-video"
             src={video.src}
-            autoPlay
+            autoPlay={shouldShow}
             muted
             loop
             playsInline
-            preload="auto"
-            controls={t > 0.7}
+            preload={shouldShow ? 'auto' : 'metadata'}
+            controls={shouldShow && t > 0.7}
             onLoadedData={() => setReady(true)}
             onCanPlay={() => setReady(true)}
             onPlaying={() => setReady(true)}
           />
         </div>
       </div>
-      <div className="device-meta" style={{ opacity: t > 0.35 && ready ? 1 : 0 }}>
+      <div className="device-meta" style={{ opacity: shouldShow && t > 0.35 && ready ? 1 : 0 }}>
         <span>{video.label}</span>
         {category.videos.length > 1 && (
           <>
