@@ -1,0 +1,285 @@
+{
+  "report": {
+    "cinema": {
+      "start": {
+        "title": "Cinema",
+        "seqSrc": "cinema/frame-00.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "turn": {
+        "title": "Cinema",
+        "seqSrc": "cinema/frame-12.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "device": {
+        "title": null,
+        "seqSrc": null,
+        "hasFigure": false,
+        "hasDevice": true,
+        "hasRotateY": true,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      }
+    },
+    "ai": {
+      "start": {
+        "title": "AI Filmmaking",
+        "seqSrc": "ai/frame-00.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "turn": {
+        "title": "AI Filmmaking",
+        "seqSrc": "ai/frame-12.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "device": {
+        "title": null,
+        "seqSrc": null,
+        "hasFigure": false,
+        "hasDevice": true,
+        "hasRotateY": true,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": true,
+        "dots": 6
+      }
+    },
+    "advertising": {
+      "start": {
+        "title": "Advertising",
+        "seqSrc": "advertising/frame-00.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "turn": {
+        "title": "Advertising",
+        "seqSrc": "advertising/frame-12.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "device": {
+        "title": null,
+        "seqSrc": null,
+        "hasFigure": false,
+        "hasDevice": true,
+        "hasRotateY": true,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": true,
+        "dots": 6
+      }
+    },
+    "corporate": {
+      "start": {
+        "title": "Corporate",
+        "seqSrc": "corporate/frame-00.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "turn": {
+        "title": "Corporate",
+        "seqSrc": "corporate/frame-12.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "device": {
+        "title": null,
+        "seqSrc": null,
+        "hasFigure": false,
+        "hasDevice": true,
+        "hasRotateY": true,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": true,
+        "dots": 9
+      }
+    },
+    "animation": {
+      "start": {
+        "title": "Animation",
+        "seqSrc": "animation/frame-00.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "turn": {
+        "title": "Animation",
+        "seqSrc": "animation/frame-12.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "device": {
+        "title": null,
+        "seqSrc": null,
+        "hasFigure": false,
+        "hasDevice": true,
+        "hasRotateY": true,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": true,
+        "dots": 2
+      }
+    },
+    "drone": {
+      "start": {
+        "title": "Drone videos",
+        "seqSrc": "drone/frame-00.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "turn": {
+        "title": "Drone videos",
+        "seqSrc": "drone/frame-12.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "device": {
+        "title": null,
+        "seqSrc": null,
+        "hasFigure": false,
+        "hasDevice": true,
+        "hasRotateY": true,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      }
+    },
+    "social": {
+      "start": {
+        "title": "Social Media",
+        "seqSrc": "social/frame-00.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "turn": {
+        "title": "Social Media",
+        "seqSrc": "social/frame-12.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "device": {
+        "title": null,
+        "seqSrc": null,
+        "hasFigure": false,
+        "hasDevice": true,
+        "hasRotateY": true,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": true,
+        "dots": 13
+      }
+    },
+    "webseries": {
+      "start": {
+        "title": "Webseries",
+        "seqSrc": "webseries/frame-00.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "turn": {
+        "title": "Webseries",
+        "seqSrc": "webseries/frame-12.jpg",
+        "hasFigure": true,
+        "hasDevice": false,
+        "hasRotateY": false,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": false,
+        "dots": 0
+      },
+      "device": {
+        "title": null,
+        "seqSrc": null,
+        "hasFigure": false,
+        "hasDevice": true,
+        "hasRotateY": true,
+        "videoW": 0,
+        "videoPlaying": false,
+        "swipeHint": true,
+        "dots": 6
+      }
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,285 @@
+{
+  "report": {
+    "cinema": {
+      "start": {
+        "title": "Cinema",
+        "hasSeq": true,
+        "seqSrc": "/sequences/cinema/frame-00.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "cinema-start.png"
+      },
+      "turn": {
+        "title": "Cinema",
+        "hasSeq": true,
+        "seqSrc": "/sequences/cinema/frame-15.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "cinema-turn.png"
+      },
+      "device": {
+        "title": null,
+        "hasSeq": false,
+        "seqSrc": null,
+        "hasDevice": true,
+        "transform": "matrix(1, 0, 0, 1, -440, -261)",
+        "videoReady": 4,
+        "videoW": 1280,
+        "bezelClass": "device-bezel is-ready",
+        "shot": "cinema-device.png"
+      }
+    },
+    "ai": {
+      "start": {
+        "title": "AI Filmmaking",
+        "hasSeq": true,
+        "seqSrc": "/sequences/ai/frame-00.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "ai-start.png"
+      },
+      "turn": {
+        "title": "AI Filmmaking",
+        "hasSeq": true,
+        "seqSrc": "/sequences/ai/frame-15.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "ai-turn.png"
+      },
+      "device": {
+        "title": null,
+        "hasSeq": false,
+        "seqSrc": null,
+        "hasDevice": true,
+        "transform": "matrix(1, 0, 0, 1, -150, -297.758)",
+        "videoReady": 4,
+        "videoW": 1080,
+        "bezelClass": "device-bezel is-ready",
+        "shot": "ai-device.png"
+      }
+    },
+    "advertising": {
+      "start": {
+        "title": "Advertising",
+        "hasSeq": true,
+        "seqSrc": "/sequences/advertising/frame-00.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "advertising-start.png"
+      },
+      "turn": {
+        "title": "Advertising",
+        "hasSeq": true,
+        "seqSrc": "/sequences/advertising/frame-15.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "advertising-turn.png"
+      },
+      "device": {
+        "title": null,
+        "hasSeq": false,
+        "seqSrc": null,
+        "hasDevice": true,
+        "transform": "matrix(1, 0, 0, 1, -440, -278.594)",
+        "videoReady": 4,
+        "videoW": 1280,
+        "bezelClass": "device-bezel is-ready",
+        "shot": "advertising-device.png"
+      }
+    },
+    "corporate": {
+      "start": {
+        "title": "Corporate",
+        "hasSeq": true,
+        "seqSrc": "/sequences/corporate/frame-00.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "corporate-start.png"
+      },
+      "turn": {
+        "title": "Corporate",
+        "hasSeq": true,
+        "seqSrc": "/sequences/corporate/frame-15.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "corporate-turn.png"
+      },
+      "device": {
+        "title": null,
+        "hasSeq": false,
+        "seqSrc": null,
+        "hasDevice": true,
+        "transform": "matrix(1, 0, 0, 1, -390, -274.844)",
+        "videoReady": 1,
+        "videoW": 1280,
+        "bezelClass": "device-bezel is-loading",
+        "shot": "corporate-device.png"
+      }
+    },
+    "animation": {
+      "start": {
+        "title": "Animation",
+        "hasSeq": true,
+        "seqSrc": "/sequences/animation/frame-00.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "animation-start.png"
+      },
+      "turn": {
+        "title": "Animation",
+        "hasSeq": true,
+        "seqSrc": "/sequences/animation/frame-15.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "animation-turn.png"
+      },
+      "device": {
+        "title": null,
+        "hasSeq": false,
+        "seqSrc": null,
+        "hasDevice": true,
+        "transform": "matrix(1, 0, 0, 1, -230, -337.094)",
+        "videoReady": 4,
+        "videoW": 720,
+        "bezelClass": "device-bezel is-ready",
+        "shot": "animation-device.png"
+      }
+    },
+    "drone": {
+      "start": {
+        "title": "Drone videos",
+        "hasSeq": true,
+        "seqSrc": "/sequences/drone/frame-00.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "drone-start.png"
+      },
+      "turn": {
+        "title": "Drone videos",
+        "hasSeq": true,
+        "seqSrc": "/sequences/drone/frame-15.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "drone-turn.png"
+      },
+      "device": {
+        "title": null,
+        "hasSeq": false,
+        "seqSrc": null,
+        "hasDevice": true,
+        "transform": "matrix(1, 0, 0, 1, -440, -261)",
+        "videoReady": 4,
+        "videoW": 1280,
+        "bezelClass": "device-bezel is-ready",
+        "shot": "drone-device.png"
+      }
+    },
+    "social": {
+      "start": {
+        "title": "Social Media",
+        "hasSeq": true,
+        "seqSrc": "/sequences/social/frame-00.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "social-start.png"
+      },
+      "turn": {
+        "title": "Social Media",
+        "hasSeq": true,
+        "seqSrc": "/sequences/social/frame-15.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "social-turn.png"
+      },
+      "device": {
+        "title": null,
+        "hasSeq": false,
+        "seqSrc": null,
+        "hasDevice": true,
+        "transform": "matrix(1, 0, 0, 1, -150, -297.758)",
+        "videoReady": 4,
+        "videoW": 1080,
+        "bezelClass": "device-bezel is-ready",
+        "shot": "social-device.png"
+      }
+    },
+    "webseries": {
+      "start": {
+        "title": "Webseries",
+        "hasSeq": true,
+        "seqSrc": "/sequences/webseries/frame-00.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "webseries-start.png"
+      },
+      "turn": {
+        "title": "Webseries",
+        "hasSeq": true,
+        "seqSrc": "/sequences/webseries/frame-15.jpg",
+        "hasDevice": false,
+        "transform": null,
+        "videoReady": -1,
+        "videoW": 0,
+        "bezelClass": null,
+        "shot": "webseries-turn.png"
+      },
+      "device": {
+        "title": null,
+        "hasSeq": false,
+        "seqSrc": null,
+        "hasDevice": true,
+        "transform": "matrix(1, 0, 0, 1, -440, -278.594)",
+        "videoReady": 4,
+        "videoW": 1920,
+        "bezelClass": "device-bezel is-ready",
+        "shot": "webseries-device.png"
+      }
+    }
+  },
+  "errors": []
+}

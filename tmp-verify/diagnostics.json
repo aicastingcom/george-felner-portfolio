@@ -1,0 +1,60 @@
+{
+  "presence": {
+    "01-cinema-start.png": {
+      "canvas": true,
+      "title": "Cinema",
+      "device": false,
+      "deviceCenter": null,
+      "deviceFixed": false,
+      "bored": false,
+      "scrollY": 1836
+    },
+    "02-cinema-turn.png": {
+      "canvas": true,
+      "title": "Cinema",
+      "device": false,
+      "deviceCenter": null,
+      "deviceFixed": false,
+      "bored": false,
+      "scrollY": 2160
+    },
+    "03-cinema-reveal.png": {
+      "canvas": true,
+      "title": null,
+      "device": true,
+      "deviceCenter": 461,
+      "deviceFixed": false,
+      "bored": false,
+      "scrollY": 2582
+    },
+    "04-cinema-zoom.png": {
+      "canvas": false,
+      "title": null,
+      "device": true,
+      "deviceCenter": 720,
+      "deviceFixed": true,
+      "bored": false,
+      "scrollY": 3132
+    },
+    "05-ai-zoom.png": {
+      "canvas": false,
+      "title": null,
+      "device": true,
+      "deviceCenter": 720,
+      "deviceFixed": true,
+      "bored": true,
+      "scrollY": 6552
+    },
+    "06-animation-after-ai.png": {
+      "canvas": true,
+      "title": "Animation",
+      "device": false,
+      "deviceCenter": null,
+      "deviceFixed": false,
+      "bored": false,
+      "scrollY": 15808
+    }
+  },
+  "errors": [],
+  "seqImgs": 0
+}

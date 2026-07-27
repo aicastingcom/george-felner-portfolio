@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "text": "George Felner",
+    "color": "rgb(242, 242, 240)",
+    "opacity": "1",
+    "visible": true,
+    "rootHTML": 2944,
+    "bodyText": "George Felner\nABOUT\nCONTACT ME\n01\nCINEMA\n02\nAI FILMMAKING\n03\nADVERTISING\n04\nCORPORATE\n05\nANIMATION\n06\nDRONE VIDEOS\n07\nSOCIAL MEDIA\n08\nWEBSERIES\nGEORGE FELNER\n\nFilmmaker · 12 international awards\n\nSCRO"
+  },
+  "check": {
+    "ids": {
+      "cinema": true,
+      "ai": true,
+      "advertising": true,
+      "corporate": true,
+      "animation": true,
+      "drone": true,
+      "social": true,
+      "webseries": true
+    },
+    "canvas": true,
+    "anyWhiteText": true
+  },
+  "errors": []
+}

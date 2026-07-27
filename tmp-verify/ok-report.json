@@ -1,0 +1,94 @@
+{
+  "status": 200,
+  "boot": {
+    "hasRoot": true,
+    "hero": true,
+    "heroText": "George Felner",
+    "heroBio": "Filmmaker · 12 international awards",
+    "categories": [
+      "cinema",
+      "ai",
+      "advertising",
+      "corporate",
+      "animation",
+      "drone",
+      "social",
+      "webseries"
+    ],
+    "gates": 0
+  },
+  "report": {
+    "cinema": {
+      "id": "cinema",
+      "title": "Cinema",
+      "canvas": true,
+      "deviceControls": false,
+      "flatDeviceScreen": false
+    },
+    "ai": {
+      "id": "ai",
+      "title": "AI Filmmaking",
+      "canvas": true,
+      "deviceControls": false,
+      "flatDeviceScreen": false
+    },
+    "advertising": {
+      "id": "advertising",
+      "title": "Advertising",
+      "canvas": true,
+      "deviceControls": false,
+      "flatDeviceScreen": false
+    },
+    "corporate": {
+      "id": "corporate",
+      "title": "Corporate",
+      "canvas": true,
+      "deviceControls": false,
+      "flatDeviceScreen": false
+    },
+    "animation": {
+      "id": "animation",
+      "title": "Animation",
+      "canvas": true,
+      "deviceControls": false,
+      "flatDeviceScreen": false
+    },
+    "drone": {
+      "id": "drone",
+      "title": "Drone videos",
+      "canvas": true,
+      "deviceControls": false,
+      "flatDeviceScreen": false
+    },
+    "social": {
+      "id": "social",
+      "title": "Social Media",
+      "canvas": true,
+      "deviceControls": false,
+      "flatDeviceScreen": false
+    },
+    "webseries": {
+      "id": "webseries",
+      "title": "Webseries",
+      "canvas": true,
+      "deviceControls": false,
+      "flatDeviceScreen": false
+    },
+    "cinemaTurn": {
+      "canvas": true,
+      "title": "Cinema"
+    },
+    "cinemaZoom": {
+      "canvas": true,
+      "controls": true,
+      "flatDeviceScreen": false
+    },
+    "ghost": {
+      "bored": false,
+      "canvas": true,
+      "title": "Animation"
+    }
+  },
+  "errors": [],
+  "logs": []
+}

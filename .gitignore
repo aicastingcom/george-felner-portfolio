@@ -1,0 +1,42 @@
+# Dependencies & local env
+node_modules
+.venv-rembg
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dev-only / huge local assets (upload videos to Hostinger separately)
+public/_live_proof
+public/_qa_matte
+public/_site_proof
+public/likeness
+public/models
+public/textures
+public/videos
+dist/_live_proof
+dist/_qa_matte
+dist/_site_proof
+dist/likeness
+dist/models
+dist/textures
+dist/videos
+
+# Keep dist/ committed — Hostinger deploys from the dist folder
