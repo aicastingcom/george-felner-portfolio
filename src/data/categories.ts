@@ -83,7 +83,7 @@ export const categories: Category[] = [
       { src: v('/videos/corporate/Camelot CareHome.mp4'), label: 'Camelot' },
       { src: v('/videos/corporate/TSK highlights v2 0.mp4'), label: 'TSK' },
       { src: v('/videos/corporate/Aspect - Drain Repair.mp4'), label: 'Aspect' },
-      { src: v('/videos/corporate-extra/Wimbledon V5.mp4'), label: 'Wimbledon' },
+      { src: v('/videos/corporate/Wimbledon V5.mp4'), label: 'Wimbledon' },
     ],
   },
   {
