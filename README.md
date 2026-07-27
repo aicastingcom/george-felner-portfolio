@@ -12,7 +12,7 @@ Hostinger Git pulls this repo and serves the **`dist`** folder.
 | Branch | `main` |
 | Directory | `dist` |
 
-**Videos** are not in Git (too large). Upload them to Hostinger `public_html/videos/` with folders: `cinema`, `ai`, `advertising`, `corporate`, `social`, `webseries`.
+**Videos** are not in Git (too large). Upload them to Hostinger `public_html/videos/` with folders: `cinema`, `ai`, `advertising`, `corporate`, `social`, `webseries`, `Animation`.
 
 ## Local development
 

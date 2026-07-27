@@ -94,12 +94,12 @@ export const categories: Category[] = [
     device: 'ipad',
     profileSide: 'right',
     videos: [
-      { src: v('/videos/social/Animation/AAAD - animation.mp4'), label: 'AAAD Animation', orientation: 'portrait' },
-      { src: v('/videos/corporate/Skittles - Animation.mp4'), label: 'Skittles', orientation: 'portrait' },
-      { src: v('/videos/webseries/Money Talks Showreel.mp4'), label: 'Money Talks Showreel', orientation: 'landscape' },
-      { src: v('/videos/webseries/Money Talks 01.mp4'), label: 'Money Talks 01', orientation: 'landscape' },
+      { src: v('/videos/Animation/AAAD - animation.mp4'), label: 'AAAD Animation', orientation: 'portrait' },
+      { src: v('/videos/Animation/Skittles - Animation.mp4'), label: 'Skittles', orientation: 'portrait' },
+      { src: v('/videos/Animation/Money Talks Showreel.mp4'), label: 'Money Talks Showreel', orientation: 'landscape' },
+      { src: v('/videos/Animation/Money Talks 01.mp4'), label: 'Money Talks 01', orientation: 'landscape' },
       {
-        src: v('/videos/webseries/Money Talks - The Crypto Mountain.mp4'),
+        src: v('/videos/Animation/Money Talks - The Crypto Mountain.mp4'),
         label: 'Crypto Mountain',
         orientation: 'landscape',
       },
