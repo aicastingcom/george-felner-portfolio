@@ -38,7 +38,11 @@ trigger_hostinger() {
     if [[ -n "$url" ]]; then
       echo "→ Triggering Hostinger deploy…"
       local status
-      status=$(curl -sS -o /dev/null -w "%{http_code}" -X POST "$url" || echo "000")
+      status=$(curl -sS -o /dev/null -w "%{http_code}" \
+        -X POST "$url" \
+        -H 'Content-Type: application/json' \
+        -H 'X-GitHub-Event: push' \
+        -d '{"ref":"refs/heads/live"}' || echo "000")
       if [[ "$status" =~ ^(200|201|202|204)$ ]]; then
         echo "   Hostinger webhook OK ($status)"
         return 0
